@@ -19,6 +19,7 @@ gem 'devise'
 gem 'decent_exposure'
 gem 'decent_decoration'
 gem 'konf'
+gem 'i18n'
 
 group :development, :test do
   gem 'awesome_print'

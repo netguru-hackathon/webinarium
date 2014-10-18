@@ -283,6 +283,7 @@ DEPENDENCIES
   ffaker
   guard-rspec
   haml-rails
+  i18n
   jbuilder (~> 2.0)
   jquery-rails
   konf
