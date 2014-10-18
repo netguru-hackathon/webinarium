@@ -7,18 +7,24 @@
         %h4=webinar.title
     .row
       .col-md-2
-        .glyphicon.glyphicon-play
+        .tile.tile-video
+          .glyphicon.glyphicon-play
       .col-md-2
-        = webinar.language
+        .tile.tile-lang
+          = webinar.language
       - if webinar.blogpost_url.present?
         .col-md-2
-          .glyphicon.glyphicon-book
+          .tile.tile-blog
+            .glyphicon.glyphicon-book
       - if webinar.doc_url.present?
         .col-md-2
-          .glyphicon.glyphicon-file
+          .tile.tile-doc
+            .glyphicon.glyphicon-file
       - if webinar.code_url.present?
         .col-md-2
-          .glyphicon.glyphicon-list-alt
+          .tile.tile-code
+            .glyphicon.glyphicon-list-alt
       - if webinar.translation_available?
         .col-md-2
-          .glyphicon.glyphicon-subtitles
+          .tile.tile-subs
+            .glyphicon.glyphicon-subtitles
