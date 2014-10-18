@@ -10,7 +10,8 @@ class Webinar
   field :language, type: String
   field :translation_available, type: Mongoid::Boolean
 
-  validate :youtube_url, presence: true
+  validates :youtube_url, :language, presence: true
+  validate :language_option_is_valid
 
   scope :latest, -> { order_by(created_at: 'desc') }
 
@@ -25,6 +26,12 @@ class Webinar
     params = CGI.parse(uri.query)
     video_id = params.fetch("v", nil)
     video_id[0] if video_id.present?
+  end
+
+  def language_option_is_valid
+    unless ['PL', 'EN'].include? self.language.to_s.upcase
+      self.errors.add(:language, 'must be PL or EN')
+    end
   end
 
 end
