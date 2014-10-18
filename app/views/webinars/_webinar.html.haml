@@ -8,23 +8,23 @@
     .row
       .col-md-2
         .tile.tile-video
-          .glyphicon.glyphicon-play
+          %span.glyphicon.glyphicon-play
       .col-md-2
         .tile.tile-lang
-          = webinar.language
+          %span= webinar.language
       - if webinar.blogpost_url.present?
         .col-md-2
           .tile.tile-blog
-            .glyphicon.glyphicon-book
+            %span.glyphicon.glyphicon-book
       - if webinar.doc_url.present?
         .col-md-2
           .tile.tile-doc
-            .glyphicon.glyphicon-file
+            %span.glyphicon.glyphicon-file
       - if webinar.code_url.present?
         .col-md-2
           .tile.tile-code
-            .glyphicon.glyphicon-list-alt
+            %span.glyphicon.glyphicon-list-alt
       - if webinar.translation_available?
         .col-md-2
           .tile.tile-subs
-            .glyphicon.glyphicon-subtitles
+            %span.glyphicon.glyphicon-subtitles

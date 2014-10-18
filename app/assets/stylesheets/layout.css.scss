@@ -1,0 +1,10 @@
+.navbar-webinarium {
+  background-color: $headerBg;
+  border-color: $headerBorder;
+  a {
+    color: $headerLink;
+  }
+  li>a:hover, a:hover {
+    background-color: $headerLinkHover;
+  }
+}
