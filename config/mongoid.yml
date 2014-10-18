@@ -1,0 +1,15 @@
+development:
+  sessions:
+    default:
+      hosts:
+        - localhost:27017
+      database: webinarium_development
+      identity_map_enabled: true
+
+test:
+  sessions:
+    default:
+      hosts:
+        - localhost:27017
+      database: webinarium_test
+      identity_map_enabled: true
