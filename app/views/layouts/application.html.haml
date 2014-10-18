@@ -5,5 +5,12 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    /[if lt IE 9]
+      %script{ src: "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" }
+      %script{ src: "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" }
   %body
-    = yield
+    = render 'layouts/navbar'
+    .container
+      .row
+        = render 'layouts/flash_messages'
+        = yield

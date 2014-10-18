@@ -1,0 +1,10 @@
+.row
+  .col-md-12
+    .flash-messages
+      - flash.each do |name, msg|
+        .alert{ class: "alert alert-#{flash_msg_class(name)}", role: "alert" }
+          = content_tag :div, msg
+          - if @errors && @errors[name.to_sym]
+            %ul
+              - @errors[name.to_sym].each do |error_message|
+                %li= error_message
