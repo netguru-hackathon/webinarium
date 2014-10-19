@@ -3,6 +3,7 @@ defaults: &defaults
   encoding: utf8
   pool: 5
   timeout: 5000
+  host: localhost
   username: webinarium
   password:
 
