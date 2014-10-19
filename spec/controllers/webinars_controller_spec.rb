@@ -2,9 +2,11 @@ require 'rails_helper'
 
 describe WebinarsController, type: :controller do
   describe '#index' do
-    it 'responds with 200' do
-      get :index
-      expect(response.status).to eq 200
+    context 'for not logged in user' do
+      it 'redirects to login page' do
+        get :index
+        expect(response).to redirect_to(auth_path)
+      end
     end
   end
 end

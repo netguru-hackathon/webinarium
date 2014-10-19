@@ -1,3 +1,5 @@
+defaults: &defaults
+
 development:
   <<: *defaults
   github:
