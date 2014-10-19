@@ -1,0 +1,10 @@
+= simple_form_for webinar do |f|
+  = f.input :title
+  = f.input :youtube_url
+  = f.input :language, as: :select
+  = f.input :translation_available, as: :boolean
+  = f.input :blogpost_url
+  = f.input :doc_url
+  = f.input :code_url
+  = f.submit t('common.save')
+

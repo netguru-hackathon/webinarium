@@ -1,7 +1,11 @@
 en:
+  common:
+    save: 'Save'
   webinars:
     index:
       title: "Latest webinars"
+    new:
+      title: "Add a new webinar"
   sessions:
     index:
       log_in: "Hi there! You need to log in :)"

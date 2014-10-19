@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback' => 'sessions#create'
   delete '/auth/signout' => 'sessions#destroy'
 
+  resources :webinars, except: [:destroy]
+
 end

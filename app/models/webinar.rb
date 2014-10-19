@@ -2,7 +2,7 @@ class Webinar < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :youtube_url, :language, presence: true
+  validates :title, :youtube_url, :language, presence: true
   validate :language_option_is_valid
 
   scope :latest, -> { order(created_at: :desc) }

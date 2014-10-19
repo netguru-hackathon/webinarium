@@ -8,6 +8,10 @@
         %span.icon-bar
       %a.navbar-brand{ href: root_path } Webinarium
     #header-navbar-collapse.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        - if authenticated?
+          %li
+            = link_to 'Add', new_webinar_path
       %ul.nav.navbar-nav.navbar-right
         - if authenticated?
           %li
