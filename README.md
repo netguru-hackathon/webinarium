@@ -1,6 +1,3 @@
-webinarium
-==========
-
 # Database setup
 
 We're using postgres.
