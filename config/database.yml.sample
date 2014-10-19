@@ -1,0 +1,16 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+  username: webinarium
+  password:
+
+development:
+  <<: *defaults
+  database: webinarium_development
+
+test: &test
+  <<: *defaults
+  database: webinarium_test
+

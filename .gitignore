@@ -32,3 +32,5 @@ bower.json
 
 # Ignore secrets
 /config/sec_config.yml
+
+/config/database.yml
