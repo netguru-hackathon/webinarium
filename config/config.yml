@@ -6,3 +6,6 @@ development:
 
 test:
   <<: *defaults
+  github:
+    client_id: 'test'
+    client_secret: 'test'
