@@ -1,15 +1,6 @@
-class Webinar
+class Webinar < ActiveRecord::Base
 
-  include Mongoid::Document
-  include Mongoid::Timestamps
-
-  field :title, type: String
-  field :youtube_url, type: String
-  field :blogpost_url, type: String
-  field :doc_url, type: String
-  field :code_url, type: String
-  field :language, type: String
-  field :translation_available, type: Mongoid::Boolean
+  belongs_to :user
 
   validates :youtube_url, :language, presence: true
   validate :language_option_is_valid
