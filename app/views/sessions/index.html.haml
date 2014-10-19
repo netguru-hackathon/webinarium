@@ -1,2 +1,6 @@
-%p You need to login first.
-= link_to 'Login with github', github_auth_path
+.row
+  .col-md-12.login-box__message
+    %h1= t('.log_in')
+.row
+  .col-md-12.login-box__action
+    = link_to 'Login with github', github_auth_path, class: 'btn btn-default'

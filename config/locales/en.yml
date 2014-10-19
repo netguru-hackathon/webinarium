@@ -2,3 +2,6 @@ en:
   webinars:
     index:
       title: "Latest webinars"
+  sessions:
+    index:
+      log_in: "Hi there! You need to log in :)"
