@@ -7,4 +7,5 @@ Rails.application.configure do
   config.active_support.deprecation = :log
   config.assets.debug = true
   config.assets.raise_runtime_errors = true
+  default_url_options[:host] = AppConfig.domain
 end

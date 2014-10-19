@@ -21,6 +21,9 @@ gem 'decent_decoration'
 gem 'konf'
 gem 'i18n'
 
+gem 'omniauth'
+gem 'omniauth-github'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'bogus', require: false

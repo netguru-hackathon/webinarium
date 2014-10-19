@@ -1,0 +1,8 @@
+defaults: &defaults
+
+development:
+  <<: *defaults
+  domain: webinarium.dev
+
+test:
+  <<: *defaults
