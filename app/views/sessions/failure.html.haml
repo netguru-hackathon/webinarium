@@ -1,0 +1,5 @@
+%p We couldn't log you in
+  %p
+    The reason we received from github was:
+    %code= failure_message
+= link_to 'Try again?', github_auth_path, class: 'btn btn-primary btn-lg'
