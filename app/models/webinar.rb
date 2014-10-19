@@ -5,7 +5,7 @@ class Webinar < ActiveRecord::Base
   validates :youtube_url, :language, presence: true
   validate :language_option_is_valid
 
-  scope :latest, -> { order_by(created_at: 'desc') }
+  scope :latest, -> { order(created_at: :desc) }
 
   def thumbnail
     "http://i1.ytimg.com/vi/#{youtube_video_id}/hqdefault.jpg" if youtube_video_id.present?
