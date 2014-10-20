@@ -7,8 +7,11 @@
   li>a:hover, a:hover {
     background-color: $headerLinkHover;
   }
-  li span {
-    line-height: 50px;
+  li.open .dropdown-toggle {
+    background-color: $headerDropdownOpen;
+  }
+  .dropdown-menu li>a:hover {
+    background-color: $headerDropdownHover;
   }
 }
 

@@ -1,7 +1,7 @@
 en:
   common:
     save: 'Save'
-    signout: 'Log out'
+    logout: 'Log out'
   webinars:
     index:
       title: "Latest webinars"
