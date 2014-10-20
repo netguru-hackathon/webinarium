@@ -7,6 +7,8 @@ en:
       title: "Latest webinars"
     new:
       title: "Add a new webinar"
+    edit:
+      title: "Edit your webinar"
   sessions:
     index:
       log_in: "Hi there! You need to log in :)"

@@ -21,7 +21,6 @@ class WebinarsController < ApplicationController
   end
 
   def update
-    webinar.user_id = current_user.id
     if webinar.save
       redirect_to webinars_path
     else
