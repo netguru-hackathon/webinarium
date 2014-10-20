@@ -3,9 +3,6 @@
     %img{ src: webinar.thumbnail }
   .col-md-7.col-xs-12
     .row
-      .col-md-12
-        %h4=webinar.title
-    .row
       .col-md-2
         .tile.tile-video
           %span.glyphicon.glyphicon-play
@@ -28,3 +25,13 @@
         .col-md-2
           .tile.tile-subs
             %span.glyphicon.glyphicon-subtitles
+    .row
+      .col-md-12
+        %h3
+          %span.author= "#{webinar.user.name}:"
+          =webinar.title
+      .col-md-12
+        %p=webinar.description
+.row
+  .col-md-12
+    %hr
