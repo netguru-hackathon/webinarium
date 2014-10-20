@@ -1,7 +1,8 @@
 = simple_form_for webinar do |f|
   = f.input :title
+  = f.input :description, as: :text
   = f.input :youtube_url
-  = f.input :language, as: :select
+  = f.input :language, collection: ['PL','EN']
   = f.input :translation_available, as: :boolean
   = f.input :blogpost_url
   = f.input :doc_url
