@@ -5,26 +5,21 @@
     .row
       .col-md-2
         .tile.tile-video
-          %span.glyphicon.glyphicon-play
+          = link_to webinar.youtube_url do
+            %span.glyphicon.glyphicon-play
       .col-md-2
         .tile.tile-lang
           %span= webinar.language
-      - if webinar.blogpost_url.present?
-        .col-md-2
-          .tile.tile-blog
-            %span.glyphicon.glyphicon-book
-      - if webinar.doc_url.present?
-        .col-md-2
-          .tile.tile-doc
-            %span.glyphicon.glyphicon-file
-      - if webinar.code_url.present?
-        .col-md-2
-          .tile.tile-code
-            %span.glyphicon.glyphicon-list-alt
-      - if webinar.translation_available?
-        .col-md-2
-          .tile.tile-subs
-            %span.glyphicon.glyphicon-subtitles
+      .col-md-2
+        = render 'webinar_link_tile', tilename: 'blog', link: webinar.blogpost_url, glyphicon: 'book'
+      .col-md-2
+        = render 'webinar_link_tile', tilename: 'doc', link: webinar.doc_url, glyphicon: 'file'
+      .col-md-2
+        .tile.tile-code{ class: faded_class(webinar.code_url.present?) }
+          = render 'webinar_link_tile', tilename: 'code', link: webinar.code_url, glyphicon: 'list-alt'
+      .col-md-2
+        .tile.tile-subs{ class: faded_class(webinar.translation_available) }
+          %span.glyphicon.glyphicon-subtitles
     .row
       .col-md-12
         %h3

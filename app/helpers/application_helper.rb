@@ -4,6 +4,10 @@ module ApplicationHelper
     css_classes_for_flash.fetch(name.to_sym, 'info')
   end
 
+  def faded_class(var)
+    'faded' unless var
+  end
+
   private
 
   def css_classes_for_flash

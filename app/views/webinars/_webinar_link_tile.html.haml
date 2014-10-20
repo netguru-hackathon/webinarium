@@ -1,0 +1,6 @@
+.tile{ class: "#{faded_class(link.present?)} tile-#{tilename}" }
+  - if link.present?
+    = link_to link do
+      %span.glyphicon{ class: "glyphicon-#{glyphicon}" }
+  - else
+    %span.glyphicon{ class: "glyphicon-#{glyphicon}" }
