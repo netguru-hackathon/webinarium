@@ -17,7 +17,7 @@ en:
           youtube_url: "Paste the (full) youtube url here:"
           blogpost_url: "Is there a blogpost associated with this? Paste the link here:"
           doc_url: "Have a writedown, a doc or slides? Paste the link here:"
-          code_url: "Have a repo of gist for this? Paste the link here:"
+          code_url: "Have a repo or gist for this? Paste the link here:"
           translation_available: "Did you include subtitles?"
           language: "Which language is the webinar in?"
           submit: "Add"
