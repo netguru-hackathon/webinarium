@@ -7,24 +7,51 @@
   span {
     line-height: 80px;
   }
+  a {
+    color: #fff;
+  }
 }
 .tile-video {
   background-color: #e00032;
+  &:hover {
+    background-color: #b0120a;
+  }
 }
 .tile-lang {
   background-color: #6200ea;
 }
 .tile-blog {
   background-color: #4d69ff;
+  &.faded, &.faded:hover {
+    background-color: #a6baff;
+  }
+  &:hover {
+    background-color: #2a36b1;
+  }
 }
 .tile-doc {
   background-color: #00b8d4;
+  &.faded, &.faded:hover {
+    background-color: #84ffff;
+  }
+  &:hover {
+    background-color: #006064;
+  }
 }
 .tile-code {
   background-color: #64dd17;
+  &.faded, &.faded:hover {
+    background-color: #ccff90;
+  }
+  &:hover {
+    background-color: #33691e;
+  }
 }
 .tile-subs {
   background-color: #ffab00;
+  &.faded {
+    background-color: #ffe57f;
+  }
 }
 
 span.author {
