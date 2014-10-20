@@ -13,6 +13,7 @@ module Authentication
         u.name = name
         u.remote_uid = remote_uid
         u.provider = provider
+        u.image_url = image_url
       end
     end
 
@@ -44,6 +45,10 @@ module Authentication
 
     def name
       info.fetch("name")
+    end
+
+    def image_url
+      info.fetch("picture")
     end
   end
 end
