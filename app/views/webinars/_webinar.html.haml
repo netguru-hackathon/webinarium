@@ -33,5 +33,11 @@
       .col-md-12
         %p=webinar.description
 .row
+  .col-md-5
+  .col-md-7
+    - if webinar.user.id == current_user.id
+      =link_to t('common.edit'), edit_webinar_path(webinar), class: 'btn btn-info pull-right'
+
+.row
   .col-md-12
     %hr
