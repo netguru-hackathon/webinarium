@@ -17,4 +17,6 @@
           %li
             %img.user-img{ src: current_user.image_url }
             %span= current_user.name
+          %li
+            = link_to t('common.logout'), auth_signout_path, method: :delete
 

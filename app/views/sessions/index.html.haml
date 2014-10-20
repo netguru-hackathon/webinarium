@@ -3,4 +3,7 @@
     %h1= t('.log_in')
 .row
   .col-md-12.login-box__action
-    = link_to 'Login with github', github_auth_path, class: 'btn btn-default'
+    = link_to t('.google_login'), '/auth/google_oauth2', class: 'btn btn-default'
+    - if Rails.env.development?
+      = link_to t('.dev_login'), '/auth/developer', class: 'btn btn-default'
+

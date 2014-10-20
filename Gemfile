@@ -22,7 +22,7 @@ gem 'konf'
 gem 'i18n'
 
 gem 'omniauth'
-gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   gem 'awesome_print'

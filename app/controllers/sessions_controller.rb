@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   skip_before_filter :authentication_check
+  skip_before_filter :verify_authenticity_token, only: [:create] #for 'developer' strategy
 
   respond_to :json, only: [:destroy]
 
@@ -22,7 +23,7 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    respond_with nil, location: auth_url
+    redirect_to auth_url
   end
 
   def failure

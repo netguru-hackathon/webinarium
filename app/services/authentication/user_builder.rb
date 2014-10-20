@@ -9,10 +9,8 @@ module Authentication
 
     def build
       User.new do |u|
-        u.nickname = nickname
         u.email = email
         u.name = name
-        u.image_url = image_url
         u.remote_uid = remote_uid
         u.provider = provider
       end
@@ -40,20 +38,12 @@ module Authentication
       auth.fetch("info")
     end
 
-    def nickname
-      info.fetch("nickname")
-    end
-
     def email
       info.fetch("email")
     end
 
     def name
       info.fetch("name")
-    end
-
-    def image_url
-      info.fetch("image")
     end
   end
 end

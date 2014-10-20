@@ -2,6 +2,6 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  github:
-    client_id: ''
-    client_secret: ''
+  google:
+    api_key: ''
+    api_secret: ''
