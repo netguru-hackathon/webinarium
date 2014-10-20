@@ -5,6 +5,14 @@ en:
   webinars:
     index:
       title: "Latest webinars"
+    webinar:
+      video: "video"
+      language: "language"
+      subtitles: "subtitles"
+    webinar_link_tile:
+      blog: "blogpost"
+      doc: "docs"
+      code: "code"
     new:
       title: "Add a new webinar"
     edit:
