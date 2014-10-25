@@ -16,7 +16,7 @@ describe Webinar do
 
   describe 'validation' do
     context 'for upcoming webinar' do
-      let(:webinar) { build :webinar, user_id: user.id, upcoming: true, youtube_url: nil }
+      let(:webinar) { build :webinar, user_id: user.id, upcoming: true, youtube_url: nil, planned_date: nil }
 
       it 'validates presence of the planned air date' do
         expect(webinar.valid?).to eq false

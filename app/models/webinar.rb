@@ -4,9 +4,8 @@ class Webinar < ActiveRecord::Base
   has_many :votes
   has_many :stars
 
-  validates :user_id, :title, :description, presence: true
+  validates :user_id, :title, :description, :planned_date, presence: true
   validates :youtube_url, :language, presence: true, if: :webinar_aired?
-  validates :planned_date, presence: true, if: :upcoming?
   validate :language_option_is_valid, if: :webinar_aired?
 
   scope :latest, -> { order(created_at: :desc) }

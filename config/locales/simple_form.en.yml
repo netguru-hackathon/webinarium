@@ -20,6 +20,8 @@ en:
           code_url: "Have a repo or gist for this? Paste the link here:"
           translation_available: "Did you include subtitles?"
           language: "Which language is the webinar in?"
+          upcoming: "Is this webinar planned for the future?"
+          planned_date: "When did it or is it going to air?:"
           submit: "Add"
       suggestion:
         new:
