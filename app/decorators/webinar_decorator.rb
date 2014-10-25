@@ -2,7 +2,7 @@ class WebinarDecorator < Draper::Decorator
   include Draper::LazyHelpers
 
   delegate :youtube_url, :language, :blogpost_url, :doc_url, :code_url, :translation_available,
-    :user, :title, :description, :id
+    :user, :title, :description, :id, :planned_date
 
   def thumbnail
     return if object.upcoming?
