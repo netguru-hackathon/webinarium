@@ -8,7 +8,7 @@ class VotesController < ApplicationController
     if vote.save
       redirect_to webinars_path
     else
-      redirect_to webinars_path, error: I18n.t('controllers.vote.create.error')
+      redirect_to webinars_path, error: I18n.t('controllers.votes.create.error')
     end
   end
 
@@ -17,7 +17,7 @@ class VotesController < ApplicationController
     if vote.destroyed?
       redirect_to webinars_path
     else
-      redirect_to webinars_path, error: I18n.t('controllers.vote.destroy.error')
+      redirect_to webinars_path, error: I18n.t('controllers.votes.destroy.error')
     end
   end
 

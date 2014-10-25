@@ -43,3 +43,6 @@ en:
         error: "We couldn't star this webinar"
       destroy:
         error: "We couldn't unstar this webinar"
+    suggestion_votes:
+      create:
+        error: "We couldn't upvote this suggestion"
