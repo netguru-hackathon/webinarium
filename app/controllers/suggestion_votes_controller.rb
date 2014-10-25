@@ -3,8 +3,8 @@ class SuggestionVotesController < ApplicationController
   expose(:suggestion_vote)
 
   def create
-    vote.user_id = current_user.id
-    vote.suggestion_id = suggestion.id
+    suggestion_vote.user_id = current_user.id
+    suggestion_vote.suggestion_id = suggestion.id
     if suggestion_vote.save
       redirect_to suggestions_path
     else

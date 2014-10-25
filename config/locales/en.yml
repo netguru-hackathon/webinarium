@@ -36,8 +36,11 @@ en:
   suggestions:
     index:
       title: "Latest suggestions"
+      add: "Add a new suggestion"
     suggestion:
       vote: "I like this idea"
+    new:
+      title: "Add a new suggestion for webinar"
   controllers:
     votes:
       create:

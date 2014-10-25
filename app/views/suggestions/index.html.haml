@@ -1,5 +1,8 @@
 .row
   .col-md-12
+    = link_to t('.add'), new_suggestion_path, class: 'btn btn-default'
+.row
+  .col-md-12
     %h3= t('.title')
 
 = render partial: 'suggestion', collection: suggestions
