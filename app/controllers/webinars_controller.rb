@@ -1,5 +1,5 @@
 class WebinarsController < ApplicationController
-  expose(:webinars) { Webinar.latest }
+  expose_decorated(:webinars) { Webinar.latest }
   expose(:webinar, attributes: :webinar_params)
 
   def index

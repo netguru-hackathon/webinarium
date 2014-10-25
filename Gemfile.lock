@@ -77,6 +77,11 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    draper (1.4.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.2.2)
@@ -195,6 +200,7 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.1.2)
       json (~> 1.4)
+    request_store (1.1.0)
     responders (1.1.1)
       railties (>= 3.2, < 4.2)
     rspec (3.1.0)
@@ -285,6 +291,7 @@ DEPENDENCIES
   decent_decoration
   decent_exposure
   devise
+  draper
   factory_girl_rails
   ffaker
   guard-rspec

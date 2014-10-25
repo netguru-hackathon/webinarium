@@ -23,6 +23,8 @@ gem 'i18n'
 
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'draper'
+gem 'decent_decoration'
 
 group :development, :test do
   gem 'awesome_print'
