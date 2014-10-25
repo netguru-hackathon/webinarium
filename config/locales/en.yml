@@ -2,6 +2,8 @@ en:
   common:
     save: 'Save'
     logout: 'Log out'
+    add: 'Add'
+    my_profile: 'My profile'
   webinars:
     index:
       title: "Latest webinars"

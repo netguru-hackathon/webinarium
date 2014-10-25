@@ -11,7 +11,7 @@
       %ul.nav.navbar-nav
         - if authenticated?
           %li
-            = link_to 'Add', new_webinar_path
+            = link_to t('common.add'), new_webinar_path
       %ul.nav.navbar-nav.navbar-right
         - if authenticated?
           %li
@@ -21,5 +21,7 @@
               = current_user.name
               %span.caret
             %ul.dropdown-menu{ role: "menu" }
+              %li
+                = link_to t('common.my_profile'), user_path(current_user)
               %li
                 = link_to t('common.logout'), auth_signout_path, method: :delete
