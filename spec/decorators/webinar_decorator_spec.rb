@@ -23,6 +23,15 @@ describe WebinarDecorator do
     end
   end
 
+  describe '#star_count' do
+
+    let!(:star1) { create :star, user_id: user.id, webinar_id: webinar.id }
+
+    it 'returns number of people who starred this webinar' do
+      expect(subject.star_count).to eq 1
+    end
+  end
+
   describe '#voted?' do
     context 'when user voted on this webinar' do
       let!(:vote) { create :vote, user_id: user.id, webinar_id: webinar.id }
@@ -40,5 +49,24 @@ describe WebinarDecorator do
       end
     end
   end
+
+  describe '#starred?' do
+    context 'when user starred this webinar' do
+      let!(:star) { create :star, user_id: user.id, webinar_id: webinar.id }
+
+      it 'returns true' do
+        expect(subject.starred?(user)).to eq true
+      end
+    end
+
+    context 'when user did not star this webinar' do
+      let!(:star) { create :star, user_id: other_user.id, webinar_id: webinar.id }
+
+      it 'returns true' do
+        expect(subject.starred?(user)).to eq false
+      end
+    end
+  end
+
 
 end
