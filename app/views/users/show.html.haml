@@ -1,5 +1,11 @@
 .row
   .col-md-12
+    %h3= t('.added_by_me')
+  - user.webinars.each do |webinar|
+    = render 'my_webinar', webinar: webinar.decorate
+
+.row
+  .col-md-12
     %h3= t('.starred_by_me')
   - user.starred_webinars.each do |webinar|
     = render 'starred_webinar', webinar: webinar.decorate

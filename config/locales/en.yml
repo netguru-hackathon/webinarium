@@ -34,6 +34,7 @@ en:
     show:
       starred_by_me: "Starred by me"
       liked_by_me: "Liked by me"
+      added_by_me: "Added by me"
   suggestions:
     index:
       title: "Latest suggestions"

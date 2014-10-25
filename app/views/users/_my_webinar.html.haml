@@ -1,0 +1,7 @@
+.col-md-12.col-xs-12
+  .row
+    .col-md-10.col-xs-8
+      = webinar.title
+    .col-md-2.col-xs-4
+      .pull-right
+        = link_to t('common.edit'), edit_webinar_path(webinar), class: 'btn btn-info pull-right'

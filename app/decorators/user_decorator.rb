@@ -1,6 +1,8 @@
 class UserDecorator < Draper::Decorator
   include Draper::LazyHelpers
 
+  delegate :webinars
+
   def starred_webinars
     object.stars.joins(:webinar).map { |star| star.webinar }
   end
