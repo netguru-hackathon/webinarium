@@ -4,6 +4,7 @@ describe WebinarDecorator do
 
   subject { webinar.decorate }
   let(:user) { create :user }
+  let(:other_user) { create :user }
   let(:webinar) { create :webinar, user_id: user.id }
 
   describe '#thumbnail' do
@@ -15,7 +16,7 @@ describe WebinarDecorator do
   describe '#vote_count' do
 
     let!(:vote1) { create :vote, user_id: user.id, webinar_id: webinar.id }
-    let!(:vote2) { create :vote, user_id: user.id, webinar_id: webinar.id }
+    let!(:vote2) { create :vote, user_id: other_user.id, webinar_id: webinar.id }
 
     it 'returns number of people who voted on this webinar' do
       expect(subject.vote_count).to eq 2
@@ -32,7 +33,6 @@ describe WebinarDecorator do
     end
 
     context 'when user did not vote on this webinar' do
-      let(:other_user) { create :user }
       let!(:vote) { create :vote, user_id: other_user.id, webinar_id: webinar.id }
 
       it 'returns true' do
