@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
+  resources :sugegstions, except: [:edit, :update]
+
 end
