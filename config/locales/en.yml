@@ -32,6 +32,11 @@ en:
     show:
       starred_by_me: "Starred by me"
       liked_by_me: "Liked by me"
+  suggestions:
+    index:
+      title: "Latest suggestions"
+    suggestion:
+      vote: "I like this idea"
   controllers:
     votes:
       create:
