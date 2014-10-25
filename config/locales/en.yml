@@ -9,6 +9,8 @@ en:
       video: "video"
       language: "language"
       subtitles: "subtitles"
+      vote: "I like this"
+      unvote: "Unlike"
     webinar_link_tile:
       blog: "blogpost"
       doc: "docs"
@@ -22,3 +24,9 @@ en:
       log_in: "Hi there! You need to log in :)"
       google_login: "Log in with Google"
       dev_login: "Dev login"
+  controllers:
+    votes:
+      create:
+        error: "We couldn't upvote this webinar"
+      destroy:
+        error: "We couldn't revoke the vote"

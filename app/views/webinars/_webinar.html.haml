@@ -8,12 +8,12 @@
           = link_to webinar.youtube_url do
             %span.glyphicon.glyphicon-play
         .tile-description
-          =t('.video')
+          = t('.video')
       .col-md-2
         .tile.tile-lang
           %span= webinar.language
         .tile-description
-          =t('.language')
+          = t('.language')
       .col-md-2
         = render 'webinar_link_tile', tilename: 'blog', link: webinar.blogpost_url, glyphicon: 'book'
       .col-md-2
@@ -24,19 +24,20 @@
         .tile.tile-subs{ class: faded_class(webinar.translation_available) }
           %span.glyphicon.glyphicon-subtitles
         .tile-description
-          =t('.subtitles')
+          = t('.subtitles')
     .row
       .col-md-12
         %h3
           %span.author= "#{webinar.user.name}:"
-          =webinar.title
+          = webinar.title
       .col-md-12
-        %p=webinar.description
+        %p= webinar.description
 .row
   .col-md-5
   .col-md-7
+    = webinar.like_link(current_user)
     - if webinar.user.id == current_user.id
-      =link_to t('common.edit'), edit_webinar_path(webinar), class: 'btn btn-info pull-right'
+      = link_to t('common.edit'), edit_webinar_path(webinar), class: 'btn btn-info pull-right'
 
 .row
   .col-md-12

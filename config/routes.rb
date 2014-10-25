@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   post'/auth/:provider/callback' => "sessions#create" if Rails.env.development? #for the 'developer' strategy
   delete '/auth/signout' => 'sessions#destroy'
 
-  resources :webinars, except: [:destroy]
+  resources :webinars, except: [:destroy] do
+    resources :votes, only: [:create, :destroy]
+  end
+
+
 
 end
