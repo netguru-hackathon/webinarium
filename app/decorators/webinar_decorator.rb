@@ -13,6 +13,10 @@ class WebinarDecorator < Draper::Decorator
     object.votes.count
   end
 
+  def star_count
+    object.stars.count
+  end
+
   def voted?(user)
     object.votes.pluck(:user_id).include? user.id
   end

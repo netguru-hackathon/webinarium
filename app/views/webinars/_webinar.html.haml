@@ -35,6 +35,7 @@
 .row
   .col-md-5
     = "#{t('.liked_by')}: #{webinar.vote_count}"
+    = "#{t('.starred_by')}: #{webinar.star_count}"
   .col-md-7
     = webinar.like_link(current_user)
     = webinar.star_link(current_user)
