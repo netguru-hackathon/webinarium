@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :webinars, except: [:destroy] do
     resources :votes, only: [:create, :destroy]
+    resources :stars, only: [:create, :destroy]
   end
 
 

@@ -32,3 +32,8 @@ en:
         error: "We couldn't upvote this webinar"
       destroy:
         error: "We couldn't revoke the vote"
+    stars:
+      create:
+        error: "We couldn't star this webinar"
+      destroy:
+        error: "We couldn't unstar this webinar"
