@@ -2,6 +2,7 @@ class Webinar < ActiveRecord::Base
 
   belongs_to :user
   has_many :votes
+  has_many :stars
 
   validates :title, :description, :youtube_url, :language, :user_id, presence: true
   validate :language_option_is_valid
