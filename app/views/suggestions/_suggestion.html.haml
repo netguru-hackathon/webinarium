@@ -2,4 +2,5 @@
   .col-md-12
     = suggestion.description
   .col-md-12
+    %strong.pull-right= suggestion.vote_count
     = suggestion.upvote_link(current_user)
