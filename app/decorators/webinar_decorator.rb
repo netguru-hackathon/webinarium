@@ -5,6 +5,7 @@ class WebinarDecorator < Draper::Decorator
     :user, :title, :description, :id
 
   def thumbnail
+    return if object.upcoming?
     vid = youtube_video_id
     "http://i1.ytimg.com/vi/#{vid}/hqdefault.jpg" if vid.present?
   end

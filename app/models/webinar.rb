@@ -9,6 +9,8 @@ class Webinar < ActiveRecord::Base
   validate :language_option_is_valid, if: :webinar_aired?
 
   scope :latest, -> { order(created_at: :desc) }
+  scope :upcoming, -> { where(upcoming: true).order(created_at: :asc) }
+  scope :aired, -> { where(upcoming: [false, nil]) }
 
   def webinar_aired?
     !self.upcoming

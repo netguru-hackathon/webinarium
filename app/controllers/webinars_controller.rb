@@ -1,5 +1,5 @@
 class WebinarsController < ApplicationController
-  expose_decorated(:webinars) { Webinar.latest }
+  expose_decorated(:webinars) { Webinar.aired.latest }
   expose(:webinar, attributes: :webinar_params)
 
   def index
@@ -39,7 +39,9 @@ class WebinarsController < ApplicationController
       :translation_available,
       :blogpost_url,
       :doc_url,
-      :code_url
+      :code_url,
+      :upcoming,
+      :planned_date
     )
   end
 
