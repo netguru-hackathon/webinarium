@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  expose(:user)
+  expose_decorated(:user)
 
   def show
     if user.id != current_user.id

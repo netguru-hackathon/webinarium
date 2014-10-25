@@ -28,6 +28,10 @@ en:
       log_in: "Hi there! You need to log in :)"
       google_login: "Log in with Google"
       dev_login: "Dev login"
+  users:
+    show:
+      starred_by_me: "Starred by me"
+      liked_by_me: "Liked by me"
   controllers:
     votes:
       create:

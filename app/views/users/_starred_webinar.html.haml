@@ -1,0 +1,8 @@
+.col-md-12
+  .row
+    .col-md-10.col-xs-8
+      %span.author= "#{webinar.user.name}:"
+      = webinar.title
+    .col-md-2.col-xs-4
+      .pull-right
+        = webinar.star_link(current_user)
