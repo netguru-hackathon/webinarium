@@ -4,6 +4,7 @@ en:
     logout: 'Log out'
     add: 'Add'
     my_profile: 'My profile'
+    suggestions: 'Suggestion box'
   webinars:
     index:
       title: "Latest webinars"

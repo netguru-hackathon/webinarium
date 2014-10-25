@@ -12,6 +12,8 @@
         - if authenticated?
           %li
             = link_to t('common.add'), new_webinar_path
+          %li
+            = link_to t('common.suggestions'), suggestions_path
       %ul.nav.navbar-nav.navbar-right
         - if authenticated?
           %li
