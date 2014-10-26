@@ -35,6 +35,24 @@ describe Webinar do
         expect(webinar.errors.messages[:language]).to eq ["can't be blank", "must be PL or EN"]
       end
     end
+
+    context 'for non-youtube link' do
+      let(:webinar) { build :webinar, user_id: user.id, youtube_url: "http://example.com" }
+
+      it 'returns false' do
+        expect(webinar.valid?).to eq false
+        expect(webinar.errors.messages[:youtube_url]).to eq ["please paste a full youtube url"]
+      end
+    end
+
+    context 'for youtube link' do
+      let(:webinar) { build :webinar, user_id: user.id, youtube_url: "http://www.youtube.com/watch?v=babblah" }
+
+      it 'returns true' do
+        expect(webinar.valid?).to eq true
+        expect(webinar.errors.messages[:youtube_url]).to be_nil
+      end
+    end
   end
 
 end

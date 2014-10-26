@@ -17,8 +17,6 @@ en:
       subtitles: "subtitles"
       vote: "I like this"
       unvote: "Unlike"
-      liked_by: "Liked by"
-      starred_by: "Starred by"
     webinar_link_tile:
       blog: "blogpost"
       doc: "docs"
