@@ -1,5 +1,5 @@
 class SuggestionsController < ApplicationController
-  expose_decorated(:suggestions) { Suggestion.latest }
+  expose_decorated(:suggestions) { Suggestion.latest.page(params[:page]).per(25) }
   expose(:suggestion, attributes: :suggestion_params)
 
   def index
