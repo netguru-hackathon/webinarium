@@ -25,6 +25,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'draper'
 gem 'decent_decoration'
+gem 'kaminari'
 
 group :development, :test do
   gem 'awesome_print'

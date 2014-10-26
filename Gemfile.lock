@@ -123,6 +123,9 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     jwt (1.0.0)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     konf (0.0.2)
     launchy (2.4.2)
       addressable (~> 2.3)
@@ -299,6 +302,7 @@ DEPENDENCIES
   i18n
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   konf
   letter_opener
   omniauth
