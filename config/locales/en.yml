@@ -9,6 +9,8 @@ en:
     index:
       title: "Latest webinars"
       upcoming: "Upcoming webinar"
+    upcoming_webinar:
+      title: "Upcoming webinar"
     webinar:
       video: "video"
       language: "language"

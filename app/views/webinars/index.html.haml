@@ -1,11 +1,5 @@
 - if upcoming_webinar.present?
-  .row
-    .col-md-12
-      .panel.panel-default
-        .panel-heading
-          %h3.panel-title= t('.upcoming')
-        .panel-body
-          = render 'upcoming_webinar', webinar: upcoming_webinar
+  = render 'upcoming_webinar', webinar: upcoming_webinar
 
 
 .row
