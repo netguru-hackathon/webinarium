@@ -73,3 +73,36 @@ img.author-image {
     font-weight: bold;
   }
 }
+
+.count {
+  display: inline-block;
+  margin-top: 2px;
+  .box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .count-box {
+    margin-left: -4px;
+  }
+  &.liked-by {
+    .icon-box {
+      background-color: #311b92;
+    }
+    .count-box {
+      background-color: #512da8;
+    }
+  }
+  &.starred-by {
+    .icon-box {
+      background-color: #bf360c;
+    }
+    .count-box {
+      background-color: #e64a19;
+    }
+  }
+}
