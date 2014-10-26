@@ -1,6 +1,11 @@
 .row
-  .col-md-12
-    %p= webinar.title
-    %p= webinar.description
-    %p= webinar.planned_date
+  .col-md-6
+    .upcoming-webinar
+      %span.title= webinar.title
+      %p= webinar.description
+      %p
+        Tune in on
+        %strong= l webinar.planned_date, format: :short
+  .col-md-6
+    %img.pull-right.author-image{ src: webinar.user.image_url }
 
