@@ -48,7 +48,7 @@ module Authentication
     end
 
     def image_url
-      info.fetch("picture")
+      info.fetch('picture', '')
     end
   end
 end
