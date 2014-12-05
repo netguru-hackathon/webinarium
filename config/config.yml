@@ -3,9 +3,15 @@ defaults: &defaults
 development:
   <<: *defaults
   domain: webinarium.dev
+  slack:
+    webhook_url: 'webhook_url'
+    default_channel: 'ng-team'
 
 test:
   <<: *defaults
   google:
     api_key: 'test'
     api_secret: 'test'
+  slack:
+    webhook_url: 'webhook_url'
+    default_channel: 'default_channel'
