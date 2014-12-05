@@ -25,6 +25,7 @@ gem 'draper'
 gem 'decent_exposure'
 gem 'decent_decoration'
 gem 'kaminari'
+gem 'slack-notifier'
 
 group :development, :test do
   gem 'awesome_print'
