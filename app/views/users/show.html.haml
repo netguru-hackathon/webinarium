@@ -1,17 +1,33 @@
-.row
-  .col-md-12
-    %h3= t('.added_by_me')
-  - user.webinars.each do |webinar|
-    = render 'my_webinar', webinar: webinar.decorate
+%div{role: "tabpanel"}
+  %ul.nav.nav-tabs{role: "tablist"}
+    %li.active{role: "presentation"}
+      %a{"aria-controls" => "added", "data-toggle" => "tab", href: "#added", role: "tab"} Added
+    %li{role: "presentation"}
+      %a{"aria-controls" => "starred", "data-toggle" => "tab", href: "#starred", role: "tab"} Starred
+    %li{role: "presentation"}
+      %a{"aria-controls" => "liked", "data-toggle" => "tab", href: "#liked", role: "tab"} Liked
 
-.row
-  .col-md-12
-    %h3= t('.starred_by_me')
-  - user.starred_webinars.each do |webinar|
-    = render 'starred_webinar', webinar: webinar.decorate
+  .tab-content
 
-.row
-  .col-md-12
-    %h3= t('.liked_by_me')
-  - user.liked_webinars.each do |webinar|
-    = render 'liked_webinar', webinar: webinar.decorate
+    #added.tab-pane.active{role: "tabpanel"}
+      .row
+        .col-md-12
+          %h3= t('.added_by_me')
+        - user.webinars.each do |webinar|
+          = render 'my_webinar', webinar: webinar.decorate
+
+    #starred.tab-pane{role: "tabpanel"} 
+      .row
+        .col-md-12
+          %h3= t('.starred_by_me')
+        - user.starred_webinars.each do |webinar|
+          = render 'starred_webinar', webinar: webinar.decorate
+
+
+    #liked.tab-pane{role: "tabpanel"} 
+      .row
+        .col-md-12
+          %h3= t('.liked_by_me')
+        - user.liked_webinars.each do |webinar|
+          = render 'liked_webinar', webinar: webinar.decorate
+
