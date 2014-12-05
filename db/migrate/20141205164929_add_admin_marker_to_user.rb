@@ -1,9 +1,6 @@
 class AddAdminMarkerToUser < ActiveRecord::Migration
   def change
-    def change
-    change_table :users do |t|
-      t.boolean :admin, default: false
-    end
+    add_column :users, :admin, :boolean, default: false, null: false
   end
-  end
+
 end
