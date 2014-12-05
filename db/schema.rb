@@ -77,6 +77,8 @@ ActiveRecord::Schema.define(version: 20141205162836) do
     t.boolean  "upcoming",              default: false
     t.datetime "planned_date"
     t.boolean  "reminded",              default: false
+    t.integer  "stars_count",           default: 0,     null: false
+    t.integer  "votes_count",           default: 0,     null: false
   end
 
   add_index "webinars", ["user_id"], name: "index_webinars_on_user_id", using: :btree
