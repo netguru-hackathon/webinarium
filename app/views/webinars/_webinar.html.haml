@@ -1,11 +1,11 @@
 .row
   .col-md-5.col-xs-12
-    %img{ src: webinar.thumbnail }
+    =#%img{ src: webinar.thumbnail }
   .col-md-7.col-xs-12
     .row
       .col-md-2
         .tile.tile-video
-          = link_to webinar.youtube_url do
+          = link_to "#", data: { toggle: 'modal', target: "#youtubeModal", src: "//www.youtube.com/embed/#{webinar.youtube_video_id}" }, class: 'youtubeModalButton'  do
             %span.glyphicon.glyphicon-play
         .tile-description
           = t('.video')
@@ -53,3 +53,15 @@
 .row
   .col-md-12
     %hr
+#youtubeModal.modal.fade{ aria: { hidden: "true", labelledby: "label#{webinar.id}" }, role: "dialog", tabindex: "-1" }
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{ data: { dismiss: "modal" }, type: "button" }
+          %span{ aria: { hidden: "true" } } &times;
+          %span.sr-only Close
+        %h4.modal-title{ id: "label#{webinar.id}" }
+          = webinar.title
+      .modal-body
+        %iframe(frameborder="0" allowFullScreen width='99.6%' height='360')
+      .modal-footer
