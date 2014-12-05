@@ -19,11 +19,11 @@ class WebinarDecorator < Draper::Decorator
   end
 
   def voted?(user)
-    object.votes.where(user_id: user_id).exists?
+    object.votes.where(user_id: user.id).exists?
   end
 
   def starred?(user)
-    object.stars.where(user_id: user_id).exists?
+    object.stars.where(user_id: user.id).exists?
   end
 
   def like_link(user)
