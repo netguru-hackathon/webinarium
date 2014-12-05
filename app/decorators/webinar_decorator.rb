@@ -11,19 +11,19 @@ class WebinarDecorator < Draper::Decorator
   end
 
   def vote_count
-    object.votes.count
+    object.votes_count
   end
 
   def star_count
-    object.stars.count
+    object.stars_count
   end
 
   def voted?(user)
-    object.votes.pluck(:user_id).include? user.id
+    object.votes.where(user_id: user_id).exists?
   end
 
   def starred?(user)
-    object.stars.pluck(:user_id).include? user.id
+    object.stars.where(user_id: user_id).exists?
   end
 
   def like_link(user)
