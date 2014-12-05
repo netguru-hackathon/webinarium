@@ -1,4 +1,4 @@
-= simple_form_for webinar do |f|
+= simple_form_for webinar, html: { class: 'form-vertical' } do |f|
   = f.input :title
   = f.input :description, as: :text
   = f.input :upcoming, as: :boolean
