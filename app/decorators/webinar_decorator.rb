@@ -48,6 +48,13 @@ class WebinarDecorator < Draper::Decorator
     end
   end
 
+  def youtube_video_id
+    uri = URI.parse(object.youtube_url)
+    params = CGI.parse(uri.query)
+    video_id = params.fetch("v", nil)
+    video_id[0] if video_id.present?
+  end
+
   private
 
   def user_vote(user)
@@ -57,12 +64,4 @@ class WebinarDecorator < Draper::Decorator
   def user_star(user)
     object.stars.find_by(user_id: user.id)
   end
-
-  def youtube_video_id
-    uri = URI.parse(object.youtube_url)
-    params = CGI.parse(uri.query)
-    video_id = params.fetch("v", nil)
-    video_id[0] if video_id.present?
-  end
-
 end
