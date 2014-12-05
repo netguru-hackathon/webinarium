@@ -45,8 +45,8 @@
       .box.count-box
         = webinar.star_count
   .col-md-7
-    = webinar.like_link(current_user)
-    = webinar.star_link(current_user)
+    = webinar.like_link(current_user.vote_id_for(webinar.id))
+    = webinar.star_link(current_user.star_id_for(webinar.id))
     - if webinar.user.id == current_user.id
       = link_to t('common.edit'), edit_webinar_path(webinar), class: 'btn btn-info pull-right'
 
