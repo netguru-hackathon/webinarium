@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141205162836) do
+ActiveRecord::Schema.define(version: 20141205164929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
 
   create_table "stars", force: true do |t|
     t.integer "webinar_id"
@@ -76,9 +75,9 @@ ActiveRecord::Schema.define(version: 20141205162836) do
     t.text     "description"
     t.boolean  "upcoming",              default: false
     t.datetime "planned_date"
+    t.boolean  "reminded",              default: false
     t.integer  "stars_count",           default: 0,     null: false
     t.integer  "votes_count",           default: 0,     null: false
-    t.boolean  "reminded",              default: false
   end
 
   add_index "webinars", ["user_id"], name: "index_webinars_on_user_id", using: :btree
