@@ -1,7 +1,7 @@
 class SuggestionDecorator < Draper::Decorator
   include Draper::LazyHelpers
 
-  delegate :description, :id
+  delegate :description, :id, :suggestion_votes_count
 
   def vote_count
     object.suggestion_votes.count

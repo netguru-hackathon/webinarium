@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20141205162836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "stars", force: true do |t|
     t.integer "webinar_id"
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141205162836) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "suggestion_votes_count", default: 0, null: false
   end
 
   add_index "suggestions", ["user_id"], name: "index_suggestions_on_user_id", using: :btree
