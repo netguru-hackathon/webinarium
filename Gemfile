@@ -27,6 +27,7 @@ gem 'decent_decoration'
 gem 'kaminari'
 gem 'slack-notifier'
 gem 'redcarpet'
+gem 'whenever'
 
 group :development, :test do
   gem 'awesome_print'
