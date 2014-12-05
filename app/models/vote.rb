@@ -1,6 +1,6 @@
 class Vote < ActiveRecord::Base
 
-  belongs_to :webinar
+  belongs_to :webinar, counter_cache: true
   belongs_to :user
 
   validates :webinar_id, :user_id, presence: true
