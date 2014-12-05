@@ -203,7 +203,6 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.1.2)
       json (~> 1.4)
-    redcarpet (3.2.1)
     request_store (1.1.0)
     responders (1.1.1)
       railties (>= 3.2, < 4.2)
@@ -317,7 +316,6 @@ DEPENDENCIES
   pry-rails
   quiet_assets
   rails (= 4.1.6)
-  redcarpet
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
