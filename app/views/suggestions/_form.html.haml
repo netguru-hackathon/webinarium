@@ -1,4 +1,4 @@
 = simple_form_for suggestion do |f|
-  = f.input :description, as: :text
+  = f.input :description, as: :text, input_html: { rows: 20, cols: 150 }
   = f.submit t('common.save'), class: 'btn btn-info'
 

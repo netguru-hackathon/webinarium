@@ -15,7 +15,7 @@ en:
       video: "video"
       language: "language"
       subtitles: "subtitles"
-      vote: "I like this"
+      vote: "I like it."
       unvote: "Unlike"
     webinar_link_tile:
       blog: "blogpost"
@@ -40,7 +40,7 @@ en:
       title: "Latest suggestions"
       add: "Add a new suggestion"
     suggestion:
-      vote: "I like this idea"
+      vote: "I like it"
     new:
       title: "Add a new suggestion for webinar"
   controllers:

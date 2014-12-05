@@ -1,6 +1,15 @@
 .row
+  .col-md-10
+    = markdown suggestion.description
+  .col-md-2
+    .row
+      .count.liked-by
+        .box.icon-box
+          .glyphicon.glyphicon-thumbs-up
+        .box.count-box
+          = suggestion.vote_count
+    .row
+      = suggestion.upvote_link(current_user)
+.row
   .col-md-12
-    = suggestion.description
-  .col-md-12
-    %strong.pull-right= suggestion.vote_count
-    = suggestion.upvote_link(current_user)
+    %hr
