@@ -21,6 +21,10 @@ class Webinar < ActiveRecord::Base
     self.upcoming
   end
 
+  def mark_as_reminded!
+    self.update_attribute(:reminded, true)
+  end
+
   private
 
   def language_option_is_valid
